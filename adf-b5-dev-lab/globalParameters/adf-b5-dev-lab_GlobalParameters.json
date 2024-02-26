@@ -1,0 +1,10 @@
+{
+	"container": {
+		"type": "string",
+		"value": "adlsb5conatiner"
+	},
+	"targetpath": {
+		"type": "string",
+		"value": "target"
+	}
+}
