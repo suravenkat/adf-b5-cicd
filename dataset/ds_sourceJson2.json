@@ -1,0 +1,21 @@
+{
+	"name": "ds_sourceJson2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SourceADLSfor Copy",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "drivers_Validated.json",
+				"folderPath": "source",
+				"fileSystem": "adlsb5conatiner"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

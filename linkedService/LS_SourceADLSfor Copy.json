@@ -1,0 +1,12 @@
+{
+	"name": "LS_SourceADLSfor Copy",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "To copy files from ADSL to ADLS",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://suraadlsb5.dfs.core.windows.net/"
+		}
+	}
+}

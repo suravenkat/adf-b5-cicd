@@ -1,0 +1,21 @@
+{
+	"name": "adf-b5-dev-lab",
+	"properties": {
+		"globalParameters": {
+			"container": {
+				"type": "string",
+				"value": "adlsb5conatiner"
+			},
+			"targetpath": {
+				"type": "string",
+				"value": "target"
+			}
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a0cafcf8-1581-4526-9a79-403909a09ab4",
+		"tenantId": "100a7e00-c249-4c60-b1c3-70200fb7e3dc"
+	}
+}

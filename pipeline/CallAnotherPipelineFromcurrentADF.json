@@ -1,0 +1,31 @@
+{
+	"name": "CallAnotherPipelineFromcurrentADF",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://management.azure.com/subscriptions/ccd0d4d6-cfeb-40ab-b9e4-b0a2b1c7b2d5/resourceGroups/sura-rg-pay/providers/Microsoft.DataFactory/factories/abf-b4-lab /pipelines/copyfile/createRun?api-version=2018-06-01",
+					"authentication": {
+						"type": "MSI",
+						"resource": "https://management.azure.com/"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-02-15T15:26:39Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

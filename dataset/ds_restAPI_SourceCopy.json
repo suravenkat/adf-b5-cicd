@@ -1,0 +1,13 @@
+{
+	"name": "ds_restAPI_SourceCopy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "copyRESTapi_UsingRestAPIConnector",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

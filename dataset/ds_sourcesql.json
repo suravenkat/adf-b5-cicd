@@ -1,0 +1,17 @@
+{
+	"name": "ds_sourcesql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureSQL_Source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "mastertable"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

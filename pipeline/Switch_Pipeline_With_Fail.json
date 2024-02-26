@@ -1,0 +1,97 @@
+{
+	"name": "Switch_Pipeline_With_Fail",
+	"properties": {
+		"activities": [
+			{
+				"name": "Switch1",
+				"type": "Switch",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"on": {
+						"value": "@pipeline().parameters.InputData",
+						"type": "Expression"
+					},
+					"cases": [
+						{
+							"value": "salesData",
+							"activities": [
+								{
+									"name": "SalesData",
+									"type": "ExecutePipeline",
+									"dependsOn": [],
+									"policy": {
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"pipeline": {
+											"referenceName": "PL_CopyCSVFile",
+											"type": "PipelineReference"
+										},
+										"waitOnCompletion": true
+									}
+								}
+							]
+						},
+						{
+							"value": "FinancialData",
+							"activities": [
+								{
+									"name": "FinancialData",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 3
+									}
+								}
+							]
+						},
+						{
+							"value": "employeesData",
+							"activities": [
+								{
+									"name": "EmployeesData",
+									"type": "ExecutePipeline",
+									"dependsOn": [],
+									"policy": {
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"pipeline": {
+											"referenceName": "CopySQLTabletoADLS",
+											"type": "PipelineReference"
+										},
+										"waitOnCompletion": true
+									}
+								}
+							]
+						}
+					],
+					"defaultActivities": [
+						{
+							"name": "Wronginput_FailPipeline",
+							"type": "Fail",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"message": "WrongInput.ProvideValidInput",
+								"errorCode": "42020"
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"InputData": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-02-12T15:39:15Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

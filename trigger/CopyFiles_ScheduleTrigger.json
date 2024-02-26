@@ -1,0 +1,32 @@
+{
+	"name": "CopyFiles_ScheduleTrigger",
+	"properties": {
+		"description": "This is for GlobalParam_CopyFiles",
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "GlobalParam_CopyFiles",
+					"type": "PipelineReference"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "copyBehaviour",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2024-02-22T20:37:00",
+				"endTime": "2024-02-24T14:56:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

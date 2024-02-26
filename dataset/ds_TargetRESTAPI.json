@@ -1,0 +1,25 @@
+{
+	"name": "ds_TargetRESTAPI",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SourceADLSfor Copy",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "restAPI.CSV",
+				"folderPath": "target",
+				"fileSystem": "adlsb5conatiner"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
