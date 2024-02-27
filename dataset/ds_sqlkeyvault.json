@@ -1,0 +1,16 @@
+{
+	"name": "ds_sqlkeyvault",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqlkeyvault",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employees"
+		}
+	}
+}
