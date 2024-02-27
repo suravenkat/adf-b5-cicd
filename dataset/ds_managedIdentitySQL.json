@@ -1,0 +1,16 @@
+{
+	"name": "ds_managedIdentitySQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_managedIdentitySQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employees_last7"
+		}
+	}
+}
