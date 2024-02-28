@@ -1,0 +1,16 @@
+{
+	"name": "ds_dataflowSQL2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureSQL_Source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employeesinfo"
+		}
+	}
+}
