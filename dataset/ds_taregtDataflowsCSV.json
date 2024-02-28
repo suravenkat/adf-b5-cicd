@@ -1,0 +1,23 @@
+{
+	"name": "ds_taregtDataflowsCSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SourceADLSfor Copy",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "target/dataflows",
+				"fileSystem": "adlsb5conatiner"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
